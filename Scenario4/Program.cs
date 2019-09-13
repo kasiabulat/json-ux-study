@@ -21,36 +21,36 @@ namespace Scenario4
             // TODO: Add/modify code here
             return "";
         }
-    }
 
-    // -------------------------------------
-    // The code below SHOULD NOT BE modified
-    // -------------------------------------
+        // -------------------------------------
+        // The code below SHOULD NOT BE modified
+        // -------------------------------------
 
-    public enum Genre { Classical, Rap, Soul, PopRock, Reggae };
+        public enum Genre { Classical, Rap, Soul, PopRock, Reggae };
 
-    public class Song
-    {
-        public string Title { get; set; }
-        public string Artist { get; set; }
-        public Genre Genre { get; set; }
-    }
-
-    #region Main
-    static void Main(string[] args)
-    {
-        Song song = new Song()
+        public class Song
         {
-            Title = "Hey Jude",
-            Artist = "The Beatles",
-            Genre = Genre.PopRock,
-        };
+            public string Title { get; set; }
+            public string Artist { get; set; }
+            public Genre Genre { get; set; }
+        }
 
-        string json = Serialize(song);
-        Console.WriteLine(json);
+        #region Main
+        static void Main(string[] args)
+        {
+            Song song = new Song()
+            {
+                Title = "Hey Jude",
+                Artist = "The Beatles",
+                Genre = Genre.PopRock,
+            };
 
-        Console.WriteLine("Press any key to continue ...");
-        Console.ReadKey();
+            string json = Serialize(song);
+            Console.WriteLine(json);
+
+            Console.WriteLine("Press any key to continue ...");
+            Console.ReadKey();
+        }
+        #endregion
     }
-    #endregion
 }
