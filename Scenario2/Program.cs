@@ -12,7 +12,7 @@ namespace Scenario2
          2) Insert a property "input_frequency" with value 6.
 
            DO NOT use a serializer, but parsing is OK. */
-        private static string DoubleAllProperties(string configuration)
+        private static string ModifyJson(string configuration)
         {
             // TODO: Add/modify code here
             throw new NotImplementedException();
@@ -26,7 +26,7 @@ namespace Scenario2
         static void Main(string[] args)
         {
             string configuration = File.ReadAllText("input.json");
-            string doubledProperties = DoubleAllProperties(configuration);
+            string doubledProperties = ModifyJson(configuration);
             Console.WriteLine(doubledProperties);
 
             Console.WriteLine("Press any key to continue ...");
